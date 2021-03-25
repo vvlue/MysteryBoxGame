@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MysteryBoxGame.MainPage">
+
+    <!-- Main Page -->
+
+    <StackLayout>
+        <Frame BackgroundColor="#696969" Padding="24" CornerRadius="0">
+            <Label
+                Text="Welcome to Mystery Box Game!"
+                HorizontalTextAlignment="Center"
+                TextColor="White"
+                FontSize="36"
+        />
+        </Frame>
+        
+        <Label Text="Please enter a dollar amount (between $5 and $50), in the box below. Then choose the stakes, the higher the stakes the more you can win"
+               FontSize="16"
+               Padding="30,0,30,0" />
+        
+        <Entry Placeholder="Amount"
+               x:Name="entryAmount"
+               Keyboard="Numeric" 
+               ClearButtonVisibility="WhileEditing"
+
+               />
+
+        <FlexLayout Direction="Row"
+            AlignItems="Center"
+            JustifyContent="SpaceEvenly">
+            <Button BackgroundColor="Orange" TextColor="Black" Text="Low ($5)" Clicked="OnLowStakesClicked" />
+            <Button BackgroundColor="Yellow" TextColor="Black" Text="Medium ($10)" Clicked="OnMedStakesClicked"/>
+            <Button BackgroundColor="Green" TextColor="Black" Text="High ($15)" Clicked="OnHighStakesClicked"/>
+
+        </FlexLayout>
+
+      <Button Text="How to Play"
+              Clicked="OnHelpPageClicked"/>
+
+    </StackLayout>
+
+</ContentPage>

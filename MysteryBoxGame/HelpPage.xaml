@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MysteryBoxGame.HelpPage">
+
+    <!-- Help Page -->
+
+    <StackLayout>
+        <Frame BackgroundColor="#696969" Padding="24" CornerRadius="0">
+            <Label
+                Text="Mystery Box Game!"
+                HorizontalTextAlignment="Center"
+                TextColor="White"
+                FontSize="36"
+        />
+        </Frame>
+
+        <Label Text="Help/Payout Schedule" FontSize="Title" Padding="30,5,30,5"/>
+
+        <Label Text="Choose an amount to play with and then choose the stakes. Higher stakes cost more per round but you can also win more as well."
+               FontSize="16"
+               Padding="30,0,30,0" />
+
+        <Label Text="When you enter the play area, you will see three mystery boxes. To reveal the contents of the boxes, click the 'Open Boxes' button. If you dont have enough money to play, the button will turn red and you will need to quite the game."
+               FontSize="16"
+               Padding="30,0,30,0" />
+
+        <Label Text="The content of the boxes will be added to your balance. These boxes could contain"
+               FontSize="16"
+               Padding="30,0,30,0" />
+
+        <Label Text="Low: Lead ($0) | Copper ($1) | Silver ($2) | Gold ($10)"
+               FontSize="16"
+               Padding="30,0,30,0" />
+
+        <Label Text="Low: Lead ($0) | Copper ($2) | Silver ($4) | Gold ($25)"
+               FontSize="16"
+               Padding="30,0,30,0" />
+
+        <Label Text="Low: Lead ($0) | Copper ($5) | Silver ($10) | Gold ($50)"
+               FontSize="16"
+               Padding="30,0,30,0" />
+
+        <Label Text="If each box contains gold, you can earn up to $30 (low stakes). If they contained copper, silver, and gold, you would recieve $13 ($1 + $2 + $10) and so on."
+               FontSize="16"
+               Padding="30,0,30,0" />
+
+         <!--<Button BackgroundColor="Red" TextColor="White" Text="Go Back"
+                 Clicked="OnMainPageClicked"/>-->
+
+
+    </StackLayout>
+
+</ContentPage>
