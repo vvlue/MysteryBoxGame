@@ -19,75 +19,114 @@ namespace MysteryBoxGame
         // Low
         private void OnLowStakesClicked(object sender, EventArgs e)
         {
-            int amount = Convert.ToInt32(entryAmount.Text);
-            if (amount == 5 )
+            if (entryAmount.Text != null)
             {
-                //var playGame = new PlayGame();
-                Application.Current.MainPage = new PlayGame();
-                //Application.Current.MainPage.Navigation.PushAsync(playGame);
-                ClearFields();
-            }
-            else if (amount < 5)
-            {
-                string Caption = "Amount to Low";
-                string Message = "Please Enter a higher amount, you can not afford to play this game.";
+                int amount;
+                try
+                {
+                    amount = Convert.ToInt32(entryAmount.Text);
+                }
+                catch(Exception)
+                {
+                    amount = -1;
+                }
+                
+                if (amount == 5)
+                {
+                    //var playGame = new PlayGame();
+                    Application.Current.MainPage = new PlayGame();
+                    //Application.Current.MainPage.Navigation.PushAsync(playGame);
+                    ClearFields();
+                }
+                else if (amount >= 0 && amount < 5)
+                {
+                    string Caption = "Amount to Low";
+                    string Message = "Please Enter a higher amount, you can not afford to play this game.";
+                    ClearFields();
 
-                DisplayAlert(Caption, Message, "Ok");
-            }
-            else if (amount > 50)
-            {
-                Console.WriteLine("Amount to high");
-                string Caption = "Amount to High";
-                string Message = "The most you can spend in this game is $50, please enter a lower amount.";
+                    DisplayAlert(Caption, Message, "Ok");
+                }
+                else if (amount > 50)
+                {
+                    Console.WriteLine("Amount to high");
+                    string Caption = "Amount to High";
+                    string Message = "The most you can spend in this game is $50, please enter a lower amount.";
+                    ClearFields();
 
-                DisplayAlert(Caption, Message, "Ok");
+                    DisplayAlert(Caption, Message, "Ok");
+                }
+                else
+                {
+                    
+                    string Caption = "Wrong Amount";
+                    string Message = "Please enter an amount between $5 and $50";
+                    ClearFields();
+
+                    DisplayAlert(Caption, Message, "Ok");
+                }
             }
             else
             {
+                
                 string Caption = "Wrong Amount";
                 string Message = "Please enter an amount between $5 and $50";
+                ClearFields();
 
                 DisplayAlert(Caption, Message, "Ok");
-            }
 
+            }
             
-            
+
+
+
         }
 
         // Medium
         private void OnMedStakesClicked(object sender, EventArgs e)
         {
-            int amount = Convert.ToInt32(entryAmount.Text);
-            if (amount >= 10)
+            if (entryAmount.Text != null)
             {
-                var playGame = new PlayGame();
-                //Application.Current.MainPage.Navigation.PopAsync();
-                //Application.Current.MainPage.Navigation.PushAsync(playGame);
+                int amount;
+                try
+                {
+                    amount = Convert.ToInt32(entryAmount.Text);
+                }
+                catch (Exception)
+                {
+                    amount = -1;
+                }
+              
+                if (amount == 10)
+                {
+                    var playGame = new PlayGame();
+                    //Application.Current.MainPage.Navigation.PopAsync();
+                    //Application.Current.MainPage.Navigation.PushAsync(playGame);
 
-                Application.Current.MainPage = new PlayGame();
+                    Application.Current.MainPage = new PlayGame();
 
-                ClearFields();
-            }
-            else if (amount < 10)
-            {
-                string Caption = "Amount to Low";
-                string Message = "Please Enter a higher amount, you can not afford to play this game.";
+                    ClearFields();
+                }
+                else if (amount >= 0 && amount < 10)
+                {
+                    string Caption = "Amount to Low";
+                    string Message = "Please Enter a higher amount, you can not afford to play this game.";
 
-                DisplayAlert(Caption, Message, "Ok");
-            }
-            else if (amount > 50)
-            {
-                string Caption = "Amount to High";
-                string Message = "The most you can spend in this game is $50, please enter a lower amount.";
+                    DisplayAlert(Caption, Message, "Ok");
+                }
+                else if (amount > 50)
+                {
+                    string Caption = "Amount to High";
+                    string Message = "The most you can spend in this game is $50, please enter a lower amount.";
 
-                DisplayAlert(Caption, Message, "Ok");
-            }
-            else
-            {
-                string Caption = "Wrong Amount";
-                string Message = "Please enter an amount between $5 and $50";
+                    DisplayAlert(Caption, Message, "Ok");
+                }
+                else
+                {
+                    string Caption = "Wrong Amount";
+                    string Message = "Please enter an amount between $5 and $50";
 
-                DisplayAlert(Caption, Message, "Ok");
+                    DisplayAlert(Caption, Message, "Ok");
+                }
             }
         }
 
@@ -95,38 +134,50 @@ namespace MysteryBoxGame
         // High
         private void OnHighStakesClicked(object sender, EventArgs e)
         {
-            int amount = Convert.ToInt32(entryAmount.Text);
-            if (amount >= 15)
+            if (entryAmount.Text != null)
             {
-                var playGame = new PlayGame();
-                Application.Current.MainPage.Navigation.PopAsync();
-                Application.Current.MainPage.Navigation.PushAsync(playGame);
+                int amount;
+                try
+                {
+                    amount = Convert.ToInt32(entryAmount.Text);
+                }
+                catch (Exception)
+                {
+                    amount = -1;
+                }
 
-                //Application.Current.MainPage = new NavigationPage(playGame);
+                if (amount == 15)
+                {
+                    var playGame = new PlayGame();
+                    Application.Current.MainPage.Navigation.PopAsync();
+                    Application.Current.MainPage.Navigation.PushAsync(playGame);
 
-                ClearFields();
-            }
-            else if (amount < 15)
-            {
-                Console.WriteLine("Amount to Low");
-                string Caption = "Amount to Low";
-                string Message = "Please Enter a higher amount, you can not afford to play this game.";
+                    //Application.Current.MainPage = new NavigationPage(playGame);
 
-                DisplayAlert(Caption, Message, "Ok");
-            }
-            else if (amount > 50)
-            {
-                string Caption = "Amount to High";
-                string Message = "The most you can spend in this game is $50, please enter a lower amount.";
+                    ClearFields();
+                }
+                else if (amount >= 0 && amount < 15)
+                {
+                    Console.WriteLine("Amount to Low");
+                    string Caption = "Amount to Low";
+                    string Message = "Please Enter a higher amount, you can not afford to play this game.";
 
-                DisplayAlert(Caption, Message, "Ok");
-            }
-            else
-            {
-                string Caption = "Wrong Amount";
-                string Message = "Please enter an amount between $5 and $50";
+                    DisplayAlert(Caption, Message, "Ok");
+                }
+                else if (amount > 50)
+                {
+                    string Caption = "Amount to High";
+                    string Message = "The most you can spend in this game is $50, please enter a lower amount.";
 
-                DisplayAlert(Caption, Message, "Ok");
+                    DisplayAlert(Caption, Message, "Ok");
+                }
+                else
+                {
+                    string Caption = "Wrong Amount";
+                    string Message = "Please enter an amount between $5 and $50";
+
+                    DisplayAlert(Caption, Message, "Ok");
+                }
             }
         }
 
