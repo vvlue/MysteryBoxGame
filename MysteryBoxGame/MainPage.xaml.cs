@@ -34,8 +34,9 @@ namespace MysteryBoxGame
                 if (amount == 5)
                 {
                     //var playGame = new PlayGame();
-                    Application.Current.MainPage = new PlayGame();
+                    Application.Current.MainPage = new PlayArea();
                     //Application.Current.MainPage.Navigation.PushAsync(playGame);
+                    int startingBalance = amount;
                     ClearFields();
                 }
                 else if (amount >= 0 && amount < 5)
@@ -95,13 +96,18 @@ namespace MysteryBoxGame
               
                 if (amount == 10)
                 {
-                    var playGame = new PlayGame();
-                    //Application.Current.MainPage.Navigation.PopAsync();
+                    //var playArea = new PlayArea();
+                    ////Application.Current.MainPage.Navigation.PopAsync();
+                    ////Application.Current.MainPage.Navigation.PushAsync(playGame);
+
+                    //Application.Current.MainPage = new PlayArea();
+
+                    //var playGame = new PlayGame();
+                    Application.Current.MainPage = new PlayArea();
                     //Application.Current.MainPage.Navigation.PushAsync(playGame);
-
-                    Application.Current.MainPage = new PlayGame();
-
+                    int startingBalance = amount;
                     ClearFields();
+
                 }
                 else if (amount >= 0 && amount < 10)
                 {
@@ -145,13 +151,19 @@ namespace MysteryBoxGame
 
                 if (amount == 15)
                 {
-                    var playGame = new PlayGame();
-                    Application.Current.MainPage.Navigation.PopAsync();
-                    Application.Current.MainPage.Navigation.PushAsync(playGame);
+                    //var playGame = new PlayGame();
+                    //Application.Current.MainPage.Navigation.PopAsync();
+                    //Application.Current.MainPage.Navigation.PushAsync(playGame);
 
-                    //Application.Current.MainPage = new NavigationPage(playGame);
+                    ////Application.Current.MainPage = new NavigationPage(playGame);
 
+                    //var playGame = new PlayGame();
+                    Application.Current.MainPage = new PlayArea();
+                    //Application.Current.MainPage.Navigation.PushAsync(playGame);
+                    int startingBalance = amount;
                     ClearFields();
+
+
                 }
                 else if (amount >= 0 && amount < 15)
                 {
@@ -186,10 +198,6 @@ namespace MysteryBoxGame
             Application.Current.MainPage.Navigation.PushAsync(helpPage);
 
         }
-
-        // go to play game
-
-
 
         private void ClearFields()
         {

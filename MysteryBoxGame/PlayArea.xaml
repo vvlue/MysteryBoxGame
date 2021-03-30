@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MysteryBoxGame.PlayArea">
+
+    <!-- Play Game Page -->
+
+
+    <StackLayout>
+
+        <Frame BackgroundColor="#696969" Padding="24" CornerRadius="0">
+            <Label
+                Text="Mystery Box Game"
+                HorizontalTextAlignment="Center"
+                TextColor="White"
+                FontSize="36"
+        />
+        </Frame>
+
+        <Label Text="Play Area" FontSize="Title" Padding="30,5,30,5"/>
+
+        <Label Text="Click the 'Open Boxes' button to reveal the contents inside the box" FontSize="16" Padding="30,5,30,5" />
+
+         <!--three boxes-->
+
+
+        <FlexLayout Direction="Row"
+            AlignItems="Center"
+            JustifyContent="SpaceEvenly">
+
+            <Image Source="question.gif" />
+
+            <Image Source="question.gif" />
+
+            <Image Source="question.gif" />
+
+        </FlexLayout>
+
+
+        <!--<FlexLayout Direction="Row" AlignItems="Center">
+            <Button BackgroundColor="Yellow" Text="Open Boxes" />
+        </FlexLayout>-->
+
+        
+
+        <!-- first two numbers specify the postion, the last two specify the size, length and width -->
+
+        <AbsoluteLayout>
+            <Label Text="Welcome" TextColor="Green" FontAttributes="Italic" FontSize="15"
+                   AbsoluteLayout.LayoutBounds="0.6,0.6,110,50"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <Button Background="Yellow" Text="Open Boxes"
+                    AbsoluteLayout.LayoutBounds="0.5,0.5,110,50"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"/>   
+        </AbsoluteLayout>
+
+        <Label Text="Payback Amount Pays Here" Padding="30,5,30,5"/>
+        
+        <FlexLayout Direction="Row" AlignItems="Center" JustifyContent="SpaceEvenly">
+
+            <Button BackgroundColor="LightGray" Text="Help/Rules" Clicked="OnHelpPageClicked" />
+            <!--Clicked="OnHelpPageClicked" -->
+            <Button BackgroundColor="CadetBlue" Text="Game Stats" Clicked="OnGameStatsClicked"/>
+
+        </FlexLayout>
+
+
+
+
+    </StackLayout>
+
+</ContentPage>
