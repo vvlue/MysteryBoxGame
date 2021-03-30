@@ -26,7 +26,7 @@ namespace MysteryBoxGame
                 {
                     amount = Convert.ToInt32(entryAmount.Text);
                 }
-                catch(Exception)
+                catch (Exception)
                 {
                     amount = -1;
                 }
@@ -74,10 +74,7 @@ namespace MysteryBoxGame
 
                 DisplayAlert(Caption, Message, "Ok");
 
-            }
-            
-
-
+            }            
 
         }
 
