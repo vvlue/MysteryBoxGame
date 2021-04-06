@@ -59,7 +59,7 @@
         
         <FlexLayout Direction="Row" AlignItems="Center" JustifyContent="SpaceEvenly">
 
-            <Button BackgroundColor="LightGray" Text="Help/Rules" Clicked="OnHelpPageClicked" />
+            <Button BackgroundColor="LightGray" Text="Help" Clicked="HelpAlertClicked" />
             <!--Clicked="OnHelpPageClicked" -->
             <Button BackgroundColor="CadetBlue" Text="Game Stats" Clicked="OnGameStatsClicked"/>
 

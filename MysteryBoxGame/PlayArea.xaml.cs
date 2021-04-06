@@ -24,21 +24,22 @@ namespace MysteryBoxGame
             string welcome = string.Format("Welcome your starting balance is");
         }
 
-        // go to help page
-        private void OnHelpPageClicked(object sender, EventArgs e)
+        // pop up summary of Help Page
+        private void HelpAlertClicked(object sender, EventArgs e)
         {
-            var helpPage = new HelpPage();
-            Application.Current.MainPage.Navigation.PopAsync();
-            Application.Current.MainPage.Navigation.PushAsync(helpPage);
+            
+            string Caption = "Help";
+            string Message = "Click the 'Open Boxes' button to see whats inside the box. If the box contains gold, you can earn $30 (low stakes). If they contained copper, silver, and gold, you would recieve $13 ($1 + $2 + $10) and so on. You can quit the game at any time, however once you are out of money the button will turn red and you will have to quit the game.";
+
+
+            DisplayAlert(Caption, Message, "Ok");
 
         }
 
         // go to statistics
         private void OnGameStatsClicked(object sender, EventArgs e)
         {
-            var gameStats = new GameStats();
-            Application.Current.MainPage.Navigation.PopAsync();
-            Application.Current.MainPage.Navigation.PushAsync(gameStats);
+            Application.Current.MainPage = new GameStats();
         }
     }
 }

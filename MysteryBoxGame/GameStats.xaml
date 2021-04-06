@@ -19,18 +19,21 @@
 
         <Label Text="Game Statistics" FontSize="Title" Padding="30,5,30,5"/>
 
-        <Label Text="Starting Balance: $##" />
+        <Label Text="Starting Balance: $##" Padding="30,5,30,5" />
 
-        <Label Text="Current Balance: $##" />
+        <Label Text="Current Balance: $##" Padding="30,5,30,5" />
 
-        <Label Text="Amount Won: $##" />
+        <Label Text="Amount Won: $##" Padding="30,5,30,5" />
 
-        <Label Text="Rounds Played: ##" />
+        <Label Text="Rounds Played: ##" Padding="30,5,30,5"/>
 
         <Label Text="Use the 'Save' button to save this screen as a screenshot."
-               FontAttributes="Italic" TextColor="Green" /> 
+               FontAttributes="Italic" TextColor="Green" Padding="30,5,30,5" /> 
 
-        <FlexLayout Direction="Row" AlignItems="Center" JustifyContent="Center">
+        <FlexLayout
+            Direction="Row"
+            AlignItems="Center"
+            JustifyContent="SpaceEvenly">
 
             <Button BackgroundColor="AliceBlue" TextColor="Black" Text="Save" />
             <Button Background="red" TextColor="White" Text="Dismiss" />
