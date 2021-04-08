@@ -10,6 +10,8 @@ namespace MysteryBoxGame
         public PlayArea()
         {
             InitializeComponent();
+            
+            Box1.Source = "copper_high.gif";
         }
         // on open boxes
         private void OnOpenBoxes(object sender, EventArgs e)

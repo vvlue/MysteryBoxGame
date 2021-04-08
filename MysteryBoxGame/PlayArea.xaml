@@ -29,7 +29,9 @@
             AlignItems="Center"
             JustifyContent="SpaceEvenly">
 
-            <Image Source="question.gif" />
+            <!--<Image x:Name="imgQuestion" />-->
+
+            <Image Source="question.gif" x:Name="Box1" />
 
             <Image Source="question.gif" />
 
