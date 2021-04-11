@@ -1,33 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace MysteryBoxGame
 {
-    class Player
+    public class PlayerManager
     {
-        //private string name;
-        //private List<int> marks = new List<int>();
-        //private char symbol;
-        //private string comment;
 
         private string name;
         private int wallet;
         private int amount;
 
-
-
-        public Player(string n, int w)
+        public PlayerManager(string n, int w)
         {
             name = n;
             wallet = w;
 
 
 
-           
+
         }
-
-
 
         //public float CalculateAvg()
         //{
@@ -92,32 +81,8 @@ namespace MysteryBoxGame
         //}
 
 
-
-        public string GetName()
+        public PlayerManager()
         {
-            return name;
         }
-
-
-
-        //public override string ToString()
-        //{
-        //    string fields = name + "";
-
-
-
-        //    foreach (int mark in marks)
-        //    {
-        //        fields += mark + " ";
-        //    }
-
-
-
-        //    fields += "\n" + symbol + "\n" + comment;
-
-
-
-        //    return fields;
-        //}
     }
 }

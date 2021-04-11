@@ -81,15 +81,15 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
-    <AndroidResource Include="Resources\drawable\copper_high.gif">
+    <AndroidResource Include="Resources\drawable\03.gif">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\copper_low.gif">
+    <AndroidResource Include="Resources\drawable\01.gif">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\copper_med.gif">
+    <AndroidResource Include="Resources\drawable\02.gif">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>

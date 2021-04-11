@@ -11,7 +11,7 @@ namespace MysteryBoxGame
         {
             InitializeComponent();
             
-            Box1.Source = "copper_high.gif";
+            Box1.Source = "03.gif";
         }
         // on open boxes
         private void OnOpenBoxes(object sender, EventArgs e)
