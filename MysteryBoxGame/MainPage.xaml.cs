@@ -31,12 +31,15 @@ namespace MysteryBoxGame
                     amount = -1;
                 }
                 
-                if (amount == 5)
+                if (amount >= 5 && amount <= 50)
                 {
+                    PlayerClass player = new PlayerClass(entryName.Text, amount);
                     //var playGame = new PlayGame();
-                    Application.Current.MainPage = new PlayArea();
+                    Application.Current.MainPage = new PlayArea(player);
+
                     //Application.Current.MainPage.Navigation.PushAsync(playGame);
-                    int startingBalance = amount;
+                    //int startingBalance = amount;
+
                     ClearFields();
                 }
                 else if (amount >= 0 && amount < 5)
@@ -96,14 +99,10 @@ namespace MysteryBoxGame
               
                 if (amount == 10)
                 {
-                    //var playArea = new PlayArea();
-                    ////Application.Current.MainPage.Navigation.PopAsync();
-                    ////Application.Current.MainPage.Navigation.PushAsync(playGame);
 
-                    //Application.Current.MainPage = new PlayArea();
-
+                    PlayerClass player = new PlayerClass(entryName.Text, amount);
                     //var playGame = new PlayGame();
-                    Application.Current.MainPage = new PlayArea();
+                    Application.Current.MainPage = new PlayArea(player);
                     //Application.Current.MainPage.Navigation.PushAsync(playGame);
                     int startingBalance = amount;
                     ClearFields();
@@ -151,14 +150,10 @@ namespace MysteryBoxGame
 
                 if (amount == 15)
                 {
-                    //var playGame = new PlayGame();
-                    //Application.Current.MainPage.Navigation.PopAsync();
-                    //Application.Current.MainPage.Navigation.PushAsync(playGame);
 
-                    ////Application.Current.MainPage = new NavigationPage(playGame);
-
+                    PlayerClass player = new PlayerClass(entryName.Text, amount);
                     //var playGame = new PlayGame();
-                    Application.Current.MainPage = new PlayArea();
+                    Application.Current.MainPage = new PlayArea(player);
                     //Application.Current.MainPage.Navigation.PushAsync(playGame);
                     int startingBalance = amount;
                     ClearFields();

@@ -7,24 +7,33 @@ namespace MysteryBoxGame
 {
     public partial class PlayArea : ContentPage
     {
-        public PlayArea()
+        PlayerClass player;
+
+
+
+        public PlayArea(PlayerClass p)
         {
             InitializeComponent();
+            player = p;
             
             Box1.Source = "03.gif";
         }
         // on open boxes
         private void OnOpenBoxes(object sender, EventArgs e)
         {
-
+            List<int> values = player.OpenBoxes();
+            Box1.Source = $"a0{values[0]}.gif";
+            Box2.Source = $"_0{values[0]}.gif";
+            Box3.Source = $"_0{values[0]}.gif";
         }
+
+        //put a letter infront of file name 
 
         // feedback
-
-        private void FeedbackToPlayer()
-        {
-            string welcome = string.Format("Welcome your starting balance is");
-        }
+        //private void FeedbackToPlayer()
+        //{
+        //    string welcome = string.Format("Welcome your starting balance is");
+        //}
 
         // pop up summary of Help Page
         private void HelpAlertClicked(object sender, EventArgs e)

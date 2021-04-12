@@ -14,6 +14,13 @@
                 FontSize="36"
         />
         </Frame>
+
+        <Entry Placeholder="Enter your name"
+               x:Name="entryName"
+               ClearButtonVisibility="WhileEditing"
+               />
+
+
         
         <Label Text="Please enter a dollar amount (between $5 and $50), in the box below. Then choose the stakes, the higher the stakes the more you can win"
                FontSize="16"

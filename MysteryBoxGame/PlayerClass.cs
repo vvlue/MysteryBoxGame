@@ -4,28 +4,86 @@ using System.Text;
 
 namespace MysteryBoxGame
 {
-    class Player
+    public class PlayerClass
     {
-        //private string name;
-        //private List<int> marks = new List<int>();
-        //private char symbol;
-        //private string comment;
-
+        
         private string name;
         private int wallet;
-        private int amount;
+       
+        private BoxClass[,] rounds = new BoxClass[50,3];
+
+        private int roundCounter = 0;
 
 
-
-        public Player(string n, int w)
+        public PlayerClass(string n, int w)
         {
             name = n;
             wallet = w;
 
-
-
-           
         }
+
+        public void PlayRound(int type)
+        {
+            if (type == 1)
+            {
+                wallet -= 5;
+
+            }
+            else if (type == 2)
+            {
+                wallet -= 10;
+
+            }
+            else
+            {
+                wallet -= 15;
+
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+
+                rounds[roundCounter, i] = new BoxClass(type);
+
+            }
+
+            roundCounter++;
+
+
+        }
+
+        public List<int> OpenBoxes()
+        {
+            List<int> Values = new List<int>();
+
+            for (int i = 0; i < 3; i++)
+            {
+                Values.Add(rounds[roundCounter - 1, i].GetValue());
+
+
+            }
+
+            foreach (var value in Values)
+            {
+                wallet += value;
+
+            }
+
+            return Values;
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
 
 
 

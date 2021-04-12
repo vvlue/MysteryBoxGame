@@ -33,9 +33,9 @@
 
             <Image Source="question.gif" x:Name="Box1" />
 
-            <Image Source="question.gif" />
+            <Image Source="question.gif"  x:Name="Box2"/>
 
-            <Image Source="question.gif" />
+            <Image Source="question.gif"  x:Name="Box3"/>
 
         </FlexLayout>
 
